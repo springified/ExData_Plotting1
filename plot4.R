@@ -33,6 +33,6 @@ legend("topright", border="",
 # 4.4
 plot(wDays, temp4$Global_reactive_power, type="l", xlab="datetime", ylab="Global_reactive_power")
 
-message("Exporting Image to file './figure/plot4.png' ")
+message("Exporting Image to file './plot4.png' ")
 dev.copy(png,file="plot4.png")
 dev.off()
