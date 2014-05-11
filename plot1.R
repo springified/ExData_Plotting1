@@ -1,4 +1,5 @@
-message("You need to run this script where the data set .txt file exist. Use setwd() to set current workwing directory")
+getwd();
+message("Note: You need to run this script where the data set .txt file exist. Use setwd() to set the directory path of the dataset text file.")
 setAs("character","myDate", function(from) as.Date(from, format="%d/%m/%Y") )
 dataTemp <- read.table(file="household_power_consumption.txt" , header=TRUE, sep=";",na.strings="?" , colClasses=c('myDate','character','numeric','numeric','numeric','numeric','numeric','numeric','numeric'))
 temp3 <- dataTemp[(dataTemp$Date == '2007-02-01' | dataTemp$Date == '2007-02-02'),]
